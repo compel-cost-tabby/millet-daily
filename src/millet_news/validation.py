@@ -109,7 +109,14 @@ class PostValidator:
         for block in (post.headline, post.summary, post.image_text, post.caption):
             for value in SENTENCE.split(block):
                 value = value.strip()
-                if len(_words(value)) >= 4 and not value.lower().startswith(("source:", "sources:", "why it matters:")):
+                is_question = value.endswith("?")
+                is_hashtag_line = bool(value) and all(part.startswith("#") for part in value.split())
+                if (
+                    len(_words(value)) >= 4
+                    and not is_question
+                    and not is_hashtag_line
+                    and not value.lower().startswith(("source:", "sources:", "why it matters:"))
+                ):
                     factual_sentences.append(value)
         claim_words = [_words(c.text) for c in post.claims]
         for sentence in factual_sentences:
