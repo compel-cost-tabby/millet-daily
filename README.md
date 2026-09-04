@@ -103,11 +103,11 @@ python -m millet_news run --mode dry-run --mock-generation
 
 Meta changes its screens occasionally, but the required pieces are stable:
 
-1. Convert the Instagram profile to a Professional account. Complete its public profile and connect it to the appropriate Facebook Page when your chosen Instagram API setup requires that connection.
-2. In Meta for Developers, create a Business-type app owned by the same Meta Business Portfolio.
-3. Add the Instagram Graph API/Instagram product and configure the Instagram professional account as a test or managed account.
-4. Grant the permissions needed by the current Meta content-publishing flow. Common permissions include `instagram_basic`, `instagram_content_publish`, `pages_show_list` and `pages_read_engagement`; confirm the current official permission names for your chosen login flow.
-5. Generate a long-lived access token and obtain the Instagram professional account ID. Test the token with Meta's Graph API Explorer before using it here.
+1. Convert the Instagram profile to a Professional account.
+2. In Meta for Developers, create an app with the **Manage messaging & content on Instagram** use case and select **API setup with Instagram login**. This flow does not require a Facebook Page.
+3. Configure the Instagram professional account as an Instagram Tester and accept the invitation from Instagram's Apps and Websites settings.
+4. Grant `instagram_business_basic` and `instagram_business_content_publish`. The setup UI may also request the comment, message and insights scopes when those features are enabled.
+5. Generate an Instagram User access token and obtain the Instagram professional account ID. This project sends publishing calls to `graph.instagram.com`, as required by Instagram Login.
 6. Store the values as `INSTAGRAM_ACCOUNT_ID` and `META_ACCESS_TOKEN`. Set `META_GRAPH_VERSION` to a currently supported version if the default has changed.
 7. Token types differ. `python -m millet_news refresh-token` calls Instagram's compatible long-lived-token refresh endpoint. Page access tokens used by some Facebook Login flows follow a different lifecycle; use Meta's documented flow for that token instead.
 
@@ -124,10 +124,10 @@ The publisher creates a single-image media container, polls until processing fin
 3. Add repository variables:
    - `RUN_MODE` = `dry-run` initially
    - `GEMINI_MODEL` = `gemini-2.5-flash`
-   - `META_GRAPH_VERSION` = the supported version you tested
+   - `META_GRAPH_VERSION` = `v25.0` (the version currently shown by Meta's integration helper)
    - `AUTOMATION_APPROVED` = `false`
 4. Under **Settings → Actions → General → Workflow permissions**, allow read and write permissions. The workflow's short-lived `GITHUB_TOKEN` uploads only the generated public image to `published-assets/`.
-5. Run **Daily millet content** manually in `dry-run` mode. Download the artifact, inspect its draft JSON and JPEG, and confirm the test step passed.
+5. Run **Daily millet content** manually in `dry-run` mode. Download the artifact, inspect its draft JSON and JPEG, and confirm the test step passed. The workflow first validates the Instagram account ID and token with a read-only API request; it does not publish during this check.
 6. Run locally with `approval` mode for the first real draft:
 
 ```powershell
