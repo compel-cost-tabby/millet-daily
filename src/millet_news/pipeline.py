@@ -125,3 +125,25 @@ class Pipeline:
         post_id = self._publish(post, mock_publish)
         self.history.set_status(draft_id, "published", post_id)
         return {"status": "published", "draft_id": draft_id, "instagram_post_id": post_id}
+
+    def publish_file(self, draft_path: str | Path, mock_publish: bool = False) -> dict:
+        """Revalidate and publish an explicitly reviewed draft artifact."""
+        target = Path(draft_path)
+        payload = json.loads(target.read_text(encoding="utf-8"))
+        post = GeneratedPost.from_dict(payload["post"])
+        materials = [SourceMaterial(**material) for material in payload["materials"]]
+        validation = self.validator.validate(post, materials)
+        if not validation.valid:
+            return {"status": "rejected", "errors": validation.errors}
+        image_path = Path(post.image_path)
+        if not image_path.is_absolute():
+            image_path = Path(self.config["root"]) / image_path
+        if not image_path.is_file():
+            raise FileNotFoundError(f"Reviewed image does not exist: {image_path}")
+        post.image_path = str(image_path)
+        post_id = self._publish(post, mock_publish)
+        existing = self.history.get(post.draft_id)
+        if existing is None:
+            self.history.save_draft(post, materials[0], status="pending")
+        self.history.set_status(post.draft_id, "published", post_id)
+        return {"status": "published", "draft_id": post.draft_id, "instagram_post_id": post_id}
