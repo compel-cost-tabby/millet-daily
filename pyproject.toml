@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "millet-daily"
+version = "1.0.0"
+description = "A fail-closed, automated faceless Instagram publisher about millet grains"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "beautifulsoup4>=4.12,<5",
+  "feedparser>=6.0.11,<7",
+  "Pillow>=10.3,<12",
+  "PyYAML>=6.0.1,<7",
+  "requests>=2.32,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2,<9", "pytest-cov>=5,<6"]
+
+[project.scripts]
+millet-news = "millet_news.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
