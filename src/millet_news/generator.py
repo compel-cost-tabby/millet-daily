@@ -59,7 +59,7 @@ def _prompt(materials: list[SourceMaterial], topic: str) -> str:
 class GeminiGenerator:
     def __init__(self, api_key: str | None = None, model: str | None = None, timeout: int = 45) -> None:
         self.api_key = api_key or os.getenv("GEMINI_API_KEY", "")
-        self.model = model or os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+        self.model = model or os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
         self.timeout = timeout
 
     def generate(self, materials: list[SourceMaterial], topic: str) -> GeneratedPost:
