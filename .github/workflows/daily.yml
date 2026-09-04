@@ -28,7 +28,7 @@ jobs:
       GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
       INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
       META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
-      META_GRAPH_VERSION: ${{ vars.META_GRAPH_VERSION || 'v25.0' }}
+      META_GRAPH_VERSION: ${{ vars.META_GRAPH_VERSION || 'v26.0' }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GITHUB_REPOSITORY: ${{ github.repository }}
       GITHUB_BRANCH: ${{ github.event.repository.default_branch }}
