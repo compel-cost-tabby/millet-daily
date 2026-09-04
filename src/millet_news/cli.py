@@ -9,7 +9,7 @@ import sys
 from .config import env_bool, load_all
 from .logging_setup import configure_logging
 from .pipeline import Pipeline
-from .publisher import refresh_instagram_token
+from .publisher import refresh_instagram_token, verify_instagram_credentials
 from .samples import generate_samples
 
 
@@ -28,6 +28,7 @@ def _parser() -> argparse.ArgumentParser:
     ready = sub.add_parser("readiness", help="Run tests and a mocked end-to-end check")
     ready.add_argument("--skip-tests", action="store_true")
     sub.add_parser("refresh-token", help="Refresh a compatible long-lived Instagram token")
+    sub.add_parser("verify-instagram", help="Validate the Instagram credentials without publishing")
     return parser
 
 
@@ -46,6 +47,8 @@ def main(argv: list[str] | None = None) -> int:
             result = pipeline.approve(args.draft_id, args.mock_publish)
         elif args.command == "refresh-token":
             result = refresh_instagram_token()
+        elif args.command == "verify-instagram":
+            result = verify_instagram_credentials()
         elif args.command == "readiness":
             if not args.skip_tests:
                 completed = subprocess.run([sys.executable, "-m", "pytest"], cwd=config["root"], check=False)
