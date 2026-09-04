@@ -52,7 +52,7 @@ Important files:
 2. A configured feed is not trusted merely because it returns data: every final item URL must remain on its allow-listed publisher domain after the feed response is parsed.
 3. The ICRISAT feed is documented but disabled because its server currently returns HTTP 403 to automated feed clients. Re-enable it when the publisher permits RSS readers; the official FAO feed and PubMed API are enabled and verified.
 4. The included evergreen entries are starting material, not a permanent editorial database. Review them and add approved topics over time. A reused article URL is rejected even if its angle differs.
-5. Gemini's free tier has usage limits and its availability/terms can change. The model name is configurable. Current official documentation lists `gemini-2.5-flash` as supporting structured output and a free tier.
+5. Gemini's free tier has usage limits and its availability/terms can change. The model name is configurable. Current official documentation lists `gemini-3.5-flash` as a stable model with a free tier.
 6. Meta requires a publicly reachable image URL. The included no-extra-cost solution uploads the generated JPEG to `published-assets/` in a **public** GitHub repository. A private repository's raw URL will not work for Meta.
 7. Instagram publishing requires a Professional (Business or Creator) account and Meta app configuration. Meta may require app review for accounts the app does not own/manage.
 8. GitHub Actions cron is UTC and is not guaranteed to start at the exact minute. The included `03:30 UTC` schedule corresponds to `09:00 Asia/Kolkata`.
@@ -96,7 +96,7 @@ python -m millet_news run --mode dry-run --mock-generation
 
 1. Open Google AI Studio and create a Gemini API key in a Google Cloud project.
 2. Confirm that the project's billing setting and quota match the free tier you intend to use. The repository never enables billing.
-3. Store the key as `GEMINI_API_KEY`. The default stable model is `gemini-2.5-flash`; override it with `GEMINI_MODEL` if Google changes availability.
+3. Store the key as `GEMINI_API_KEY`. The default stable model is `gemini-3.5-flash`; override it with `GEMINI_MODEL` if Google changes availability.
 4. Do not enable Gemini search grounding for this workflow. Facts come from the explicitly retrieved approved sources.
 
 ## Meta and Instagram setup
@@ -123,7 +123,7 @@ The publisher creates a single-image media container, polls until processing fin
    - optional `FAILURE_WEBHOOK_URL`
 3. Add repository variables:
    - `RUN_MODE` = `dry-run` initially
-   - `GEMINI_MODEL` = `gemini-2.5-flash`
+   - `GEMINI_MODEL` = `gemini-3.5-flash`
    - `META_GRAPH_VERSION` = `v26.0` (the version in Meta's current Instagram Login getting-started examples)
    - `AUTOMATION_APPROVED` = `false`
 4. Under **Settings → Actions → General → Workflow permissions**, allow read and write permissions. The workflow's short-lived `GITHUB_TOKEN` uploads only the generated public image to `published-assets/`.
