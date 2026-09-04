@@ -1,0 +1,65 @@
+name: Daily millet content
+
+on:
+  schedule:
+    # 09:00 Asia/Kolkata (GitHub cron uses UTC)
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry-run, approval, or automatic"
+        required: false
+        default: "dry-run"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-millet-content
+  cancel-in-progress: false
+
+jobs:
+  create-post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      RUN_MODE: ${{ inputs.mode || vars.RUN_MODE || 'dry-run' }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
+      INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+      META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+      META_GRAPH_VERSION: ${{ vars.META_GRAPH_VERSION || 'v26.0' }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      GITHUB_BRANCH: ${{ github.event.repository.default_branch }}
+      AUTOMATION_APPROVED: ${{ vars.AUTOMATION_APPROVED || 'false' }}
+      FAILURE_WEBHOOK_URL: ${{ secrets.FAILURE_WEBHOOK_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Restore content history
+        uses: actions/cache@v4
+        with:
+          path: data/millet_news.db
+          key: ${{ runner.os }}-millet-history-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-millet-history-
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Test safety rules
+        run: pytest
+      - name: Generate and process one post
+        run: python -m millet_news run --mode "$RUN_MODE"
+      - name: Preserve drafts and logs for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: millet-content-${{ github.run_id }}
+          path: |
+            output/
+            data/*.db
+          if-no-files-found: ignore
+          retention-days: 30
