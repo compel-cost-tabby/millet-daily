@@ -1,0 +1,26 @@
+# Only enable feeds whose publisher meets the source policy. A source can be
+# disabled without editing code. Domain allow-listing is enforced after redirects.
+sources:
+  - name: FAO Newsroom
+    type: rss
+    feed_url: https://www.fao.org/feeds/fao-newsroom-rss
+    allowed_domains: [fao.org, www.fao.org]
+    credibility: 1.0
+    country: global
+    fetch_full_text: true
+    enabled: true
+  - name: ICRISAT Newsroom
+    type: rss
+    feed_url: https://pressroom.icrisat.org/feed
+    allowed_domains: [icrisat.org, pressroom.icrisat.org]
+    credibility: 1.0
+    country: india
+    # The publisher currently blocks non-browser feed clients with HTTP 403.
+    # Re-enable when its official feed permits automated RSS readers.
+    enabled: false
+  - name: PubMed (NIH)
+    type: pubmed_api
+    allowed_domains: [nih.gov, ncbi.nlm.nih.gov, pubmed.ncbi.nlm.nih.gov]
+    credibility: 1.0
+    country: global
+    enabled: true

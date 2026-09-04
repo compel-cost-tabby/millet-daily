@@ -1,0 +1,24 @@
+timezone: Asia/Kolkata
+posting_time: "09:00"
+default_mode: dry-run
+database_path: data/millet_news.db
+output_dir: output
+lookback_days: 7
+breaking_hours: 24
+topic_cooldown_days: 90
+request_timeout_seconds: 20
+max_feed_items: 40
+language: en
+category_weights:
+  news: 1.2
+  nutrition: 1.0
+  varieties: 1.0
+  farming: 1.0
+  sustainability: 1.0
+  history: 0.8
+  recipes: 0.9
+  research: 1.1
+  comparison: 0.8
+  myths: 0.8
+  industry: 0.9
+

@@ -1,0 +1,11 @@
+account_name: Millet Daily
+handle: "@millet.daily"
+logo_text: MD
+palette:
+  background: "#FFF8E8"
+  primary: "#6B4F2A"
+  secondary: "#D49A35"
+  accent: "#587A4A"
+  ink: "#232018"
+  muted: "#746B5D"
+footer: "MILLET • EVIDENCE • EVERY DAY"
