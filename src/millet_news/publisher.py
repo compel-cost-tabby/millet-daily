@@ -12,7 +12,7 @@ class InstagramPublisher:
     def __init__(self, account_id: str | None = None, access_token: str | None = None, graph_version: str | None = None, timeout: int = 30) -> None:
         self.account_id = account_id or os.getenv("INSTAGRAM_ACCOUNT_ID", "")
         self.access_token = access_token or os.getenv("META_ACCESS_TOKEN", "")
-        self.graph_version = graph_version or os.getenv("META_GRAPH_VERSION", "v25.0")
+        self.graph_version = graph_version or os.getenv("META_GRAPH_VERSION", "v26.0")
         self.timeout = timeout
 
     def publish(self, image_url: str, caption: str) -> str:
@@ -59,17 +59,17 @@ def verify_instagram_credentials(
     """Validate the configured Instagram Login token without publishing."""
     expected_id = account_id or os.getenv("INSTAGRAM_ACCOUNT_ID", "")
     token = access_token or os.getenv("META_ACCESS_TOKEN", "")
-    version = graph_version or os.getenv("META_GRAPH_VERSION", "v25.0")
+    version = graph_version or os.getenv("META_GRAPH_VERSION", "v26.0")
     if not expected_id or not token:
         raise RuntimeError("INSTAGRAM_ACCOUNT_ID and META_ACCESS_TOKEN are required")
     response = retrying_session().get(
-        f"https://graph.instagram.com/{version}/{expected_id}",
-        params={"fields": "id,username", "access_token": token},
+        f"https://graph.instagram.com/{version}/me",
+        params={"fields": "user_id,username", "access_token": token},
         timeout=timeout,
     )
     response.raise_for_status()
     payload = response.json()
-    if str(payload.get("id", "")) != expected_id:
+    if str(payload.get("user_id", "")) != expected_id:
         raise RuntimeError("Meta returned a different Instagram account ID")
     return {"status": "ok", "instagram_account_id": expected_id, "username": payload.get("username", "")}
 
