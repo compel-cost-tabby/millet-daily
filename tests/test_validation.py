@@ -31,3 +31,12 @@ def test_invented_evidence_and_health_claim_fail():
     assert any("Prohibited" in error for error in result.errors)
     assert any("not present" in error for error in result.errors)
 
+
+def test_questions_and_hashtag_lines_are_not_factual_claims():
+    item = source()
+    post = MockGenerator().generate([item], normalize_topic(item.title))
+    post.caption = post.caption.replace(
+        "Why it matters: this is a millet-specific fact worth understanding.",
+        "Why does pearl millet matter?\n\n#Millets #MilletFacts #IndianMillets",
+    )
+    assert PostValidator().validate(post, [item]).valid
