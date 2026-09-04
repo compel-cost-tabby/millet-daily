@@ -24,6 +24,9 @@ def _parser() -> argparse.ArgumentParser:
     approve = sub.add_parser("approve", help="Revalidate and publish a pending draft")
     approve.add_argument("draft_id")
     approve.add_argument("--mock-publish", action="store_true")
+    publish_file = sub.add_parser("publish-file", help="Revalidate and publish an explicitly reviewed draft file")
+    publish_file.add_argument("draft_path")
+    publish_file.add_argument("--mock-publish", action="store_true")
     sub.add_parser("samples", help="Generate three deterministic sample posts without publishing")
     ready = sub.add_parser("readiness", help="Run tests and a mocked end-to-end check")
     ready.add_argument("--skip-tests", action="store_true")
@@ -45,6 +48,9 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "approve":
             pipeline = Pipeline(config)
             result = pipeline.approve(args.draft_id, args.mock_publish)
+        elif args.command == "publish-file":
+            pipeline = Pipeline(config)
+            result = pipeline.publish_file(args.draft_path, args.mock_publish)
         elif args.command == "refresh-token":
             result = refresh_instagram_token()
         elif args.command == "verify-instagram":
