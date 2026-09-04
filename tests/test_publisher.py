@@ -25,22 +25,22 @@ class FakeSession:
 
 
 def test_verify_instagram_credentials_uses_instagram_login_host(monkeypatch):
-    session = FakeSession({"id": "123", "username": "millet.daily"})
+    session = FakeSession({"user_id": "123", "username": "millet.daily"})
     monkeypatch.setattr(publisher, "retrying_session", lambda: session)
 
-    result = publisher.verify_instagram_credentials("123", "secret", "v25.0")
+    result = publisher.verify_instagram_credentials("123", "secret", "v26.0")
 
-    assert session.url == "https://graph.instagram.com/v25.0/123"
-    assert session.params == {"fields": "id,username", "access_token": "secret"}
+    assert session.url == "https://graph.instagram.com/v26.0/me"
+    assert session.params == {"fields": "user_id,username", "access_token": "secret"}
     assert result == {"status": "ok", "instagram_account_id": "123", "username": "millet.daily"}
 
 
 def test_verify_instagram_credentials_rejects_wrong_account(monkeypatch):
-    session = FakeSession({"id": "999", "username": "someone.else"})
+    session = FakeSession({"user_id": "999", "username": "someone.else"})
     monkeypatch.setattr(publisher, "retrying_session", lambda: session)
 
     try:
-        publisher.verify_instagram_credentials("123", "secret", "v25.0")
+        publisher.verify_instagram_credentials("123", "secret", "v26.0")
     except RuntimeError as exc:
         assert "different Instagram account ID" in str(exc)
     else:
