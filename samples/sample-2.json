@@ -1,0 +1,67 @@
+{
+  "post": {
+    "headline": "Meet India's diverse millet family",
+    "summary": "Sorghum, pearl millet, finger millet, foxtail millet, little millet, kodo millet, barnyard millet and proso millet are distinct millet crops.",
+    "caption": "Meet India's diverse millet family\n\nSorghum, pearl millet, finger millet, foxtail millet, little millet, kodo millet, barnyard millet and proso millet are distinct millet crops.\n\nWhy it matters: this is a millet-specific fact worth understanding.\n\nSource: ICAR–Indian Institute of Millets Research (2023-01-01)",
+    "category": "varieties",
+    "hashtags": [
+      "#Millets",
+      "#MilletFacts",
+      "#KnowYourMillets",
+      "#IndianMillets"
+    ],
+    "image_text": "Sorghum, pearl millet, finger millet, foxtail millet, little millet, kodo millet, barnyard millet and proso millet are distinct millet crops.",
+    "claims": [
+      {
+        "text": "Meet India's diverse millet family",
+        "source_urls": [
+          "https://www.millets.res.in/"
+        ],
+        "evidence_quotes": [
+          "Meet India's diverse millet family"
+        ],
+        "significant": false,
+        "research_type": "not_applicable"
+      },
+      {
+        "text": "Sorghum, pearl millet, finger millet, foxtail millet, little millet, kodo millet, barnyard millet and proso millet are distinct millet crops.",
+        "source_urls": [
+          "https://www.millets.res.in/"
+        ],
+        "evidence_quotes": [
+          "Sorghum, pearl millet, finger millet, foxtail millet, little millet, kodo millet, barnyard millet and proso millet are distinct millet crops."
+        ],
+        "significant": false,
+        "research_type": "not_applicable"
+      }
+    ],
+    "sources": [
+      {
+        "name": "ICAR–Indian Institute of Millets Research",
+        "url": "https://www.millets.res.in/",
+        "published_at": "2023-01-01T00:00:00+00:00"
+      }
+    ],
+    "normalized_topic": "diverse-family-meet-millet",
+    "language": "en",
+    "draft_id": "sample-2",
+    "created_at": "2026-09-04T06:48:24+00:00",
+    "image_path": "C:\\Users\\SurajA\\Documents\\faceless-instagram-news\\samples\\sample-2.jpg"
+  },
+  "materials": [
+    {
+      "title": "Meet India's diverse millet family",
+      "url": "https://www.millets.res.in/",
+      "source_name": "ICAR–Indian Institute of Millets Research",
+      "published_at": "2023-01-01T00:00:00+00:00",
+      "text": "Meet India's diverse millet family. Sorghum, pearl millet, finger millet, foxtail millet, little millet, kodo millet, barnyard millet and proso millet are distinct millet crops. In India, jowar, bajra and ragi are common names for sorghum, pearl millet and finger millet.",
+      "credibility": 1.0,
+      "country": "india",
+      "category": "varieties",
+      "source_id": "iimr-eight-millets"
+    }
+  ],
+  "validation": {
+    "valid": true
+  }
+}

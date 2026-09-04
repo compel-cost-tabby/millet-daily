@@ -1,0 +1,41 @@
+[
+  {
+    "sample": 1,
+    "headline": "Why millets suit dryland farming",
+    "caption": "Why millets suit dryland farming\n\nMillets can grow on arid lands with minimal inputs and are resilient to changes in climate.\n\nWhy it matters: this is a millet-specific fact worth understanding.\n\nSource: Food and Agriculture Organization of the United Nations (FAO) (2022-12-06)",
+    "hashtags": [
+      "#Millets",
+      "#MilletFacts",
+      "#KnowYourMillets",
+      "#IndianMillets"
+    ],
+    "image_path": "C:\\Users\\SurajA\\Documents\\faceless-instagram-news\\samples\\sample-1.jpg",
+    "json_path": "C:\\Users\\SurajA\\Documents\\faceless-instagram-news\\samples\\sample-1.json"
+  },
+  {
+    "sample": 2,
+    "headline": "Meet India's diverse millet family",
+    "caption": "Meet India's diverse millet family\n\nSorghum, pearl millet, finger millet, foxtail millet, little millet, kodo millet, barnyard millet and proso millet are distinct millet crops.\n\nWhy it matters: this is a millet-specific fact worth understanding.\n\nSource: ICAR–Indian Institute of Millets Research (2023-01-01)",
+    "hashtags": [
+      "#Millets",
+      "#MilletFacts",
+      "#KnowYourMillets",
+      "#IndianMillets"
+    ],
+    "image_path": "C:\\Users\\SurajA\\Documents\\faceless-instagram-news\\samples\\sample-2.jpg",
+    "json_path": "C:\\Users\\SurajA\\Documents\\faceless-instagram-news\\samples\\sample-2.json"
+  },
+  {
+    "sample": 3,
+    "headline": "Millets carry centuries of food heritage",
+    "caption": "Millets carry centuries of food heritage\n\nMillets are among the first plants to be domesticated and have served as a traditional staple crop for millions of farmers in sub-Saharan Africa and Asia.\n\nWhy it matters: this is a millet-specific fact worth understanding.\n\nSource: Food and Agriculture Organization of the United Nations (FAO) (2023-01-01)",
+    "hashtags": [
+      "#Millets",
+      "#MilletFacts",
+      "#KnowYourMillets",
+      "#IndianMillets"
+    ],
+    "image_path": "C:\\Users\\SurajA\\Documents\\faceless-instagram-news\\samples\\sample-3.jpg",
+    "json_path": "C:\\Users\\SurajA\\Documents\\faceless-instagram-news\\samples\\sample-3.json"
+  }
+]

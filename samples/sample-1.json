@@ -1,0 +1,67 @@
+{
+  "post": {
+    "headline": "Why millets suit dryland farming",
+    "summary": "Millets can grow on arid lands with minimal inputs and are resilient to changes in climate.",
+    "caption": "Why millets suit dryland farming\n\nMillets can grow on arid lands with minimal inputs and are resilient to changes in climate.\n\nWhy it matters: this is a millet-specific fact worth understanding.\n\nSource: Food and Agriculture Organization of the United Nations (FAO) (2022-12-06)",
+    "category": "sustainability",
+    "hashtags": [
+      "#Millets",
+      "#MilletFacts",
+      "#KnowYourMillets",
+      "#IndianMillets"
+    ],
+    "image_text": "Millets can grow on arid lands with minimal inputs and are resilient to changes in climate.",
+    "claims": [
+      {
+        "text": "Why millets suit dryland farming",
+        "source_urls": [
+          "https://www.fao.org/millets-2023/about/en"
+        ],
+        "evidence_quotes": [
+          "Why millets suit dryland farming"
+        ],
+        "significant": false,
+        "research_type": "not_applicable"
+      },
+      {
+        "text": "Millets can grow on arid lands with minimal inputs and are resilient to changes in climate.",
+        "source_urls": [
+          "https://www.fao.org/millets-2023/about/en"
+        ],
+        "evidence_quotes": [
+          "Millets can grow on arid lands with minimal inputs and are resilient to changes in climate."
+        ],
+        "significant": false,
+        "research_type": "not_applicable"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Food and Agriculture Organization of the United Nations (FAO)",
+        "url": "https://www.fao.org/millets-2023/about/en",
+        "published_at": "2022-12-06T00:00:00+00:00"
+      }
+    ],
+    "normalized_topic": "dryland-farming-millets-suit-why",
+    "language": "en",
+    "draft_id": "sample-1",
+    "created_at": "2026-09-04T06:48:24+00:00",
+    "image_path": "C:\\Users\\SurajA\\Documents\\faceless-instagram-news\\samples\\sample-1.jpg"
+  },
+  "materials": [
+    {
+      "title": "Why millets suit dryland farming",
+      "url": "https://www.fao.org/millets-2023/about/en",
+      "source_name": "Food and Agriculture Organization of the United Nations (FAO)",
+      "published_at": "2022-12-06T00:00:00+00:00",
+      "text": "Why millets suit dryland farming. Millets can grow on arid lands with minimal inputs and are resilient to changes in climate. Their ability to tolerate adverse and arid conditions offers opportunities to strengthen food security and economic development.",
+      "credibility": 1.0,
+      "country": "global",
+      "category": "sustainability",
+      "source_id": "fao-millets-arid-lands"
+    }
+  ],
+  "validation": {
+    "valid": true
+  }
+}
