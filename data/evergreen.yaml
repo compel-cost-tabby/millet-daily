@@ -1,0 +1,66 @@
+topics:
+  - id: fao-millets-arid-lands
+    title: Why millets suit dryland farming
+    category: sustainability
+    url: https://www.fao.org/millets-2023/about/en
+    source_name: Food and Agriculture Organization of the United Nations (FAO)
+    published_at: "2022-12-06T00:00:00+00:00"
+    country: global
+    text: "Why millets suit dryland farming. Millets can grow on arid lands with minimal inputs and are resilient to changes in climate. Their ability to tolerate adverse and arid conditions offers opportunities to strengthen food security and economic development."
+  - id: iimr-eight-millets
+    title: Meet India's diverse millet family
+    category: varieties
+    url: https://www.millets.res.in/
+    source_name: ICAR–Indian Institute of Millets Research
+    published_at: "2023-01-01T00:00:00+00:00"
+    country: india
+    text: "Meet India's diverse millet family. Sorghum, pearl millet, finger millet, foxtail millet, little millet, kodo millet, barnyard millet and proso millet are distinct millet crops. In India, jowar, bajra and ragi are common names for sorghum, pearl millet and finger millet."
+  - id: fao-millets-heritage
+    title: Millets carry centuries of food heritage
+    category: history
+    url: https://www.fao.org/millets-2023/en
+    source_name: Food and Agriculture Organization of the United Nations (FAO)
+    published_at: "2023-01-01T00:00:00+00:00"
+    country: global
+    text: "Millets carry centuries of food heritage. Millets are among the first plants to be domesticated and have served as a traditional staple crop for millions of farmers in sub-Saharan Africa and Asia. They are deeply rooted in Indigenous Peoples' culture and traditions."
+  - id: fao-millets-small-grains
+    title: Millet is a group, not a single grain
+    category: myths
+    url: https://www.fao.org/millets-2023/about/en
+    source_name: Food and Agriculture Organization of the United Nations (FAO)
+    published_at: "2022-12-06T00:00:00+00:00"
+    country: global
+    text: "Millet is a group, not a single grain. Millets include a diverse group of small-grained cereals. The group includes pearl, proso, foxtail, barnyard, little, kodo, browntop, finger and Guinea millets, as well as sorghum and other species."
+  - id: fao-millet-storage
+    title: Keep millet grain dry in storage
+    category: recipes
+    url: https://www.fao.org/3/x5048e/x5048e0d.htm
+    source_name: FAO Agricultural Services Bulletin
+    published_at: "1995-01-01T00:00:00+00:00"
+    country: global
+    text: "Keep millet grain dry in storage. Drying grain before storage helps reduce deterioration. Millet grain should be protected from moisture and pests during storage, and storage containers should be clean and dry."
+  - id: icrisat-pearl-millet-dryland
+    title: Pearl millet is built for harsh drylands
+    category: farming
+    url: https://www.icrisat.org/crops/pearl-millet/
+    source_name: International Crops Research Institute for the Semi-Arid Tropics (ICRISAT)
+    published_at: "2023-01-01T00:00:00+00:00"
+    country: india
+    text: "Pearl millet is built for harsh drylands. Pearl millet is cultivated in the harshest environments of the semi-arid tropics. It is an important food and fodder crop in parts of Africa and Asia."
+  - id: un-international-year-millets
+    title: Why 2023 became the International Year of Millets
+    category: news
+    url: https://www.fao.org/millets-2023/en
+    source_name: Food and Agriculture Organization of the United Nations (FAO)
+    published_at: "2023-01-01T00:00:00+00:00"
+    country: india
+    text: "Why 2023 became the International Year of Millets. The United Nations General Assembly declared 2023 the International Year of Millets following a proposal by India. The observance aimed to raise awareness of millets' contribution to food security and nutrition."
+  - id: millet-whole-grain-preparation
+    title: Rinse millet before cooking
+    category: recipes
+    url: https://www.fao.org/documents/card/en/c/cc2592en
+    source_name: Food and Agriculture Organization of the United Nations (FAO)
+    published_at: "2023-03-01T00:00:00+00:00"
+    country: global
+    text: "Rinse millet before cooking. Millet grains can be rinsed with clean water before cooking. Cooking time and water needs vary by millet type and by whether the grain is whole, cracked or milled."
+
