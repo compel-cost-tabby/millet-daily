@@ -124,7 +124,7 @@ The publisher creates a single-image media container, polls until processing fin
 3. Add repository variables:
    - `RUN_MODE` = `dry-run` initially
    - `GEMINI_MODEL` = `gemini-2.5-flash`
-   - `META_GRAPH_VERSION` = `v25.0` (the version currently shown by Meta's integration helper)
+   - `META_GRAPH_VERSION` = `v26.0` (the version in Meta's current Instagram Login getting-started examples)
    - `AUTOMATION_APPROVED` = `false`
 4. Under **Settings → Actions → General → Workflow permissions**, allow read and write permissions. The workflow's short-lived `GITHUB_TOKEN` uploads only the generated public image to `published-assets/`.
 5. Run **Daily millet content** manually in `dry-run` mode. Download the artifact, inspect its draft JSON and JPEG, and confirm the test step passed. The workflow first validates the Instagram account ID and token with a read-only API request; it does not publish during this check.
