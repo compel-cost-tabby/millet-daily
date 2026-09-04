@@ -10,6 +10,10 @@ on:
         description: "dry-run, approval, or automatic"
         required: false
         default: "dry-run"
+      draft_path:
+        description: "Repo-relative path to an explicitly reviewed draft JSON; leave blank to generate"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -34,6 +38,7 @@ jobs:
       GITHUB_BRANCH: ${{ github.event.repository.default_branch }}
       AUTOMATION_APPROVED: ${{ vars.AUTOMATION_APPROVED || 'false' }}
       FAILURE_WEBHOOK_URL: ${{ secrets.FAILURE_WEBHOOK_URL }}
+      REVIEWED_DRAFT_PATH: ${{ inputs.draft_path || '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -54,7 +59,11 @@ jobs:
       - name: Validate Instagram credentials (read-only)
         run: python -m millet_news verify-instagram
       - name: Generate and process one post
+        if: env.REVIEWED_DRAFT_PATH == ''
         run: python -m millet_news run --mode "$RUN_MODE"
+      - name: Publish explicitly reviewed draft
+        if: env.REVIEWED_DRAFT_PATH != ''
+        run: python -m millet_news publish-file "$REVIEWED_DRAFT_PATH"
       - name: Preserve drafts and logs for review
         if: always()
         uses: actions/upload-artifact@v4
