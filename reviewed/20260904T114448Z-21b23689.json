@@ -1,0 +1,179 @@
+{
+  "post": {
+    "headline": "Laboratory Analysis Explores Herbicide Tolerance in Foxtail Millet Seedlings",
+    "summary": "A laboratory study analyzed how different foxtail millet cultivars respond to the herbicide mesotrione, identifying key physiological and genetic factors that allow certain varieties to tolerate the treatment.",
+    "caption": "According to a laboratory report, foxtail millet is an important drought-tolerant crop, but weed competition can threaten its production due to limited herbicide options. A laboratory study investigated how two different foxtail millet cultivars, Jingu 21 (JG21, sensitive) and Zhangzagu 10 (ZZG10, tolerant), respond to the herbicide mesotrione. In this laboratory study, the tolerant ZZG10 maintained a higher net photosynthetic rate and preserved its chloroplast membrane integrity under stress. Conversely, the laboratory analysis showed that JG21 chloroplasts disintegrated with ruptured thylakoid membranes. The laboratory genetic analysis showed that ZZG10 had higher basal HPPD expression and stronger induction of detoxification-related genes. These laboratory findings reveal a multi-level tolerance strategy that could help in breeding herbicide-resistant foxtail millet varieties.\n\nSources: PubMed (NIH) (2026-09-03); PubMed (NIH) (2026-09-01); PubMed (NIH) (2026-06-07)",
+    "category": "research",
+    "hashtags": [
+      "#millet",
+      "#millets",
+      "#milletfacts",
+      "#milletresearch",
+      "#foxtailmillet",
+      "#milletfarming"
+    ],
+    "image_text": "A laboratory study identified key physiological and genetic traits that help certain foxtail millet varieties tolerate the herbicide mesotrione.",
+    "claims": [
+      {
+        "text": "A laboratory analysis explored herbicide tolerance in foxtail millet seedlings.",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/42692171/"
+        ],
+        "evidence_quotes": [
+          "Comparative physiological and transcriptomic analyses of differential mesotrione tolerance in foxtail millet seedlings."
+        ],
+        "significant": false,
+        "research_type": "laboratory"
+      },
+      {
+        "text": "A laboratory study analyzed how different foxtail millet cultivars respond to the herbicide mesotrione, identifying key physiological and genetic factors that allow certain varieties to tolerate the treatment.",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/42692171/"
+        ],
+        "evidence_quotes": [
+          "This study investigated the physiological and transcriptomic responses underlying differential mesotrione tolerance in two foxtail millet cultivars, Jingu 21 (JG21, sensitive) and Zhangzagu 10 (ZZG10, tolerant)."
+        ],
+        "significant": false,
+        "research_type": "laboratory"
+      },
+      {
+        "text": "According to a laboratory report, foxtail millet is an important drought-tolerant crop, but weed competition can threaten its production due to limited herbicide options.",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/42692171/"
+        ],
+        "evidence_quotes": [
+          "Foxtail millet is an important drought-tolerant crop, yet its production is threatened by weed competition due to limited herbicide options."
+        ],
+        "significant": false,
+        "research_type": "laboratory"
+      },
+      {
+        "text": "A laboratory study investigated how two different foxtail millet cultivars, Jingu 21 (JG21, sensitive) and Zhangzagu 10 (ZZG10, tolerant), respond to the herbicide mesotrione.",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/42692171/"
+        ],
+        "evidence_quotes": [
+          "This study investigated the physiological and transcriptomic responses underlying differential mesotrione tolerance in two foxtail millet cultivars, Jingu 21 (JG21, sensitive) and Zhangzagu 10 (ZZG10, tolerant)."
+        ],
+        "significant": false,
+        "research_type": "laboratory"
+      },
+      {
+        "text": "In this laboratory study, the tolerant ZZG10 maintained a higher net photosynthetic rate and preserved its chloroplast membrane integrity under stress.",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/42692171/"
+        ],
+        "evidence_quotes": [
+          "Physiological analyses revealed that ZZG10 maintained higher net photosynthetic rate (Pn), photosystem II (PSII) efficiency (Fv/Fm), and non-photochemical quenching (NPQ) compared to JG21. Chloroplast ultrastructure showed that ZZG10 preserved membrane integrity under stress"
+        ],
+        "significant": false,
+        "research_type": "laboratory"
+      },
+      {
+        "text": "Conversely, the laboratory analysis showed that JG21 chloroplasts disintegrated with ruptured thylakoid membranes.",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/42692171/"
+        ],
+        "evidence_quotes": [
+          "whereas JG21 chloroplasts disintegrated with ruptured thylakoid membranes."
+        ],
+        "significant": false,
+        "research_type": "laboratory"
+      },
+      {
+        "text": "The laboratory genetic analysis showed that ZZG10 had higher basal HPPD expression and stronger induction of detoxification-related genes.",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/42692171/"
+        ],
+        "evidence_quotes": [
+          "Transcriptomic analysis revealed that ZZG10 had higher basal HPPD expression and stronger induction of detoxification-related genes"
+        ],
+        "significant": false,
+        "research_type": "laboratory"
+      },
+      {
+        "text": "These laboratory findings reveal a multi-level tolerance strategy that could help in breeding herbicide-resistant foxtail millet varieties.",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/42692171/"
+        ],
+        "evidence_quotes": [
+          "Collectively, these findings reveal a multi-level synergistic tolerance strategy in foxtail millet and identify candidate genes for future functional validation to support breeding herbicide-resistant varieties"
+        ],
+        "significant": false,
+        "research_type": "laboratory"
+      },
+      {
+        "text": "A laboratory study identified key physiological and genetic traits that help certain foxtail millet varieties tolerate the herbicide mesotrione.",
+        "source_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/42692171/"
+        ],
+        "evidence_quotes": [
+          "This study investigated the physiological and transcriptomic responses underlying differential mesotrione tolerance in two foxtail millet cultivars, Jingu 21 (JG21, sensitive) and Zhangzagu 10 (ZZG10, tolerant)."
+        ],
+        "significant": false,
+        "research_type": "laboratory"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PubMed (NIH)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42692171/",
+        "published_at": "2026-09-03T00:00:00+00:00"
+      },
+      {
+        "name": "PubMed (NIH)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42680880/",
+        "published_at": "2026-09-01T00:00:00+00:00"
+      },
+      {
+        "name": "PubMed (NIH)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42252500/",
+        "published_at": "2026-06-07T00:00:00+00:00"
+      }
+    ],
+    "normalized_topic": "analyses-comparative-differential-foxtail-mesotrione-millet-physiological-seedlings-tolerance-transcriptomic",
+    "language": "en",
+    "draft_id": "20260904T114448Z-21b23689",
+    "created_at": "2026-09-04T11:44:48+00:00",
+    "image_path": "reviewed/20260904T114448Z-21b23689.jpg"
+  },
+  "materials": [
+    {
+      "title": "Comparative physiological and transcriptomic analyses of differential mesotrione tolerance in foxtail millet seedlings.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42692171/",
+      "source_name": "PubMed (NIH)",
+      "published_at": "2026-09-03T00:00:00+00:00",
+      "text": "Comparative physiological and transcriptomic analyses of differential mesotrione tolerance in foxtail millet seedlings.. Foxtail millet is an important drought-tolerant crop, yet its production is threatened by weed competition due to limited herbicide options. The 4-hydroxyphenylpyruvate dioxygenase (HPPD)-inhibiting herbicide mesotrione shows promise but causes differential responses among varieties. This study investigated the physiological and transcriptomic responses underlying differential mesotrione tolerance in two foxtail millet cultivars, Jingu 21 (JG21, sensitive) and Zhangzagu 10 (ZZG10, tolerant). Physiological analyses revealed that ZZG10 maintained higher net photosynthetic rate (Pn), photosystem II (PSII) efficiency (Fv/Fm), and non-photochemical quenching (NPQ) compared to JG21. Chloroplast ultrastructure showed that ZZG10 preserved membrane integrity under stress, whereas JG21 chloroplasts disintegrated with ruptured thylakoid membranes. Enzyme activity assays demonstrated that ZZG10 exhibited stronger HPPD activity and higher cytochrome P450 monooxygenases (CYP450) and glutathione S-transferases (GST) activities. Transcriptomic analysis revealed that ZZG10 had higher basal HPPD expression and stronger induction of detoxification-related genes, along with upregulated uroporphyrinogen decarboxylase (UROD) and suppressed chlorophyllase (CLH) expression associated with chlorophyll homeostasis. Protein sequence alignment confirmed no amino acid changes in HPPD between cultivars, indicating that tolerance differences are associated with gene expression levels and non-target metabolic pathways. WGCNA identified a turquoise module significantly correlated with 12 phenotypic traits, representing a core gene network associated with potential detoxification, photosynthetic maintenance, and growth recovery. Collectively, these findings reveal a multi-level synergistic tolerance strategy in foxtail millet and identify candidate genes for future functional validation to support breeding herbicide-resistant varieties and the scientific application of mesotrione in sustainable agriculture.",
+      "credibility": 1.0,
+      "country": "global",
+      "category": "research",
+      "source_id": "42692171"
+    },
+    {
+      "title": "Multi-environment dissection of the genetic architecture of grain color and milling-related recovery traits in foxtail millet.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42680880/",
+      "source_name": "PubMed (NIH)",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "text": "Multi-environment dissection of the genetic architecture of grain color and milling-related recovery traits in foxtail millet.. Multi-environment QTL analysis uncovered reproducible and novel loci underlying grain color and milling-related recovery traits in foxtail millet, and Seita.5G392600 was prioritized as a putative candidate gene for kernel yellowness and a potential breeding target. Grain appearance and processing quality are major determinants of the market value and end-use performance of foxtail millet, yet the genetic basis of these traits remains incompletely understood, particularly for kernel color and milling-related recovery traits. Here, we used 256 recombinant inbred lines derived from Jingu 21 × Chuang 29 and an ultra-high-density bin map generated by whole-genome resequencing to dissect the genetic architecture of grain color and milling-related recovery traits across eight environments. Three hull color traits (L, a, b), three kernel color traits (L, a, b), and two milling-related recovery traits, percentage of grain weight per panicle (PGWP) and percentage of kernel weight (PKW), were evaluated. In total, 74 QTL occurrences were identified and integrated into 45 distinct QTLs, including 11 reproducible loci detected in at least two environments and 34 environment-specific loci. Based on physical overlap with previously reported regions, 39 QTLs were considered putatively novel, whereas six co-localized with previously reported loci. We also identified seven multi-trait QTL clusters on chromosomes 1, 2, 3, 5, and 9. Candidate gene prioritization identified 11 genes within major QTL intervals. Among them, Seita.5G392600, encoding a putative glycosyltransferase, was prioritized as a putative candidate gene for kernel yellowness based on QTL co-localization, haplotype association, and detectable expression during grain development. The rare haplotype of Seita.5G392600 associated with higher kernel yellowness may provide useful variation for kernel color improvement, although further validation is required. These findings advance our understanding of the genetic architecture of grain appearance and milling-related recovery traits in foxtail millet and provide targets for fine mapping, functional validation, and marker-assisted improvement.",
+      "credibility": 1.0,
+      "country": "global",
+      "category": "research",
+      "source_id": "42680880"
+    },
+    {
+      "title": "Integrated Multi-Omic Analyses Uncover a Regulatory Link Between Photosynthesis and Drought Tolerance in Field-Grown Sorghum.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42252500/",
+      "source_name": "PubMed (NIH)",
+      "published_at": "2026-06-07T00:00:00+00:00",
+      "text": "Integrated Multi-Omic Analyses Uncover a Regulatory Link Between Photosynthesis and Drought Tolerance in Field-Grown Sorghum.. Global warming and increasing water scarcity pose major challenges to agriculture, emphasising the need to translate stress-biology insights into the development of drought-resilient cultivars. In this study, we evaluated a panel of six diverse sorghum (Sorghum bicolour) accessions grown under field-imposed drought conditions in central Arizona, integrating physiological, transcriptomic and oxidative stress measurements over a 7-week period. Using network analyses informed by co-expression correlations, transcription factor (TF) binding motif signatures and protein-protein interactions, we identified a drought-associated module strongly correlated with photosynthetic capacity. This module contained a stress-responsive TF, SbDof8 (referred to here as SbCDF2/3-like, or SbCDF2/3L), as a highly connected hub gene, and CDF2/3-associated binding motifs were over-represented in the promoters of co-expressed module members. These co-expressed members were enriched for stress response, metabolic and photosynthesis-related processes, and consistently maintain higher expression under drought in tolerant compared to sensitive accessions. Analysis of an independent sorghum drought time-course dataset comprised of two unique accessions revealed concordant expression patterns of SbCDF2/3L and photosynthesis-associated module genes between drought-tolerant and drought-sensitive genotypes, reinforcing the robustness of this regulatory module. Together, our results highlight a subset of photosystem I (PSI)-related genes, including light-harvesting proteins, PSI subunits and importantly, a potential drought-responsive transcriptional regulator that are collectively upregulated in resilient accessions as a means of coping with drought response. These data highlight promising breeding targets for improving drought resilience and biomass productivity in sorghum under field conditions.",
+      "credibility": 1.0,
+      "country": "global",
+      "category": "research",
+      "source_id": "42252500"
+    }
+  ],
+  "validation": {
+    "valid": true,
+    "warnings": []
+  }
+}
