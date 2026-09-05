@@ -101,6 +101,24 @@ def _normalize_post(post: GeneratedPost, materials: list[SourceMaterial], topic:
         {"name": item.source_name, "url": item.url, "published_at": item.published_at}
         for item in materials
     ]
+    allowed_research_types = {"not_applicable", "human", "animal", "laboratory", "review", "observational"}
+    for claim in post.claims:
+        research_type = re.sub(r"[^a-z]+", "_", claim.research_type.lower()).strip("_")
+        claim.research_type = research_type if research_type in allowed_research_types else "not_applicable"
+
+        # Pair every quote with the supplied source that actually contains it.
+        grounded_pairs: list[tuple[str, str]] = []
+        for quote in claim.evidence_quotes:
+            normalized_quote = re.sub(r"\s+", " ", quote).strip().lower()
+            for item in materials:
+                normalized_text = re.sub(r"\s+", " ", item.text).lower()
+                if normalized_quote and normalized_quote in normalized_text:
+                    grounded_pairs.append((item.url, quote))
+                    break
+        if grounded_pairs:
+            claim.source_urls = [url for url, _ in grounded_pairs]
+            claim.evidence_quotes = [quote for _, quote in grounded_pairs]
+
     source_footer = "Sources: " + "; ".join(
         f"{item.source_name} ({item.published_at[:10]})" for item in materials
     )
