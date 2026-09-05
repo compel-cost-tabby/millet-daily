@@ -113,11 +113,17 @@ def _normalize_post(post: GeneratedPost, materials: list[SourceMaterial], topic:
 class GeminiGenerator:
     def __init__(self, api_key: str | None = None, model: str | None = None, timeout: int = 45) -> None:
         self.api_key = api_key or os.getenv("GEMINI_API_KEY", "")
-        self.model = model or os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+        self.model = model or os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
+        configured_fallbacks = os.getenv(
+            "GEMINI_FALLBACK_MODELS", "gemini-3.1-flash-lite,gemini-2.5-flash-lite"
+        )
+        self.models = list(dict.fromkeys([
+            self.model,
+            *(value.strip() for value in configured_fallbacks.split(",") if value.strip()),
+        ]))
         self.timeout = timeout
 
     def _request(self, prompt: str) -> GeneratedPost:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model}:generateContent"
         body = {
             "systemInstruction": {"parts": [{"text": SYSTEM_INSTRUCTION}]},
             "contents": [{"role": "user", "parts": [{"text": prompt}]}],
@@ -127,12 +133,25 @@ class GeminiGenerator:
                 "responseSchema": SCHEMA,
             },
         }
-        # Free-tier overload can outlast the default rapid retries. Retry only
-        # generation here, with 20/40/80-second backoff, never Instagram publishing.
-        response = retrying_session(total=4, retry_post=True, backoff_factor=10).post(
-            url, headers={"x-goog-api-key": self.api_key}, json=body, timeout=self.timeout
-        )
-        response.raise_for_status()
+        response = None
+        last_error: requests.RequestException | None = None
+        for index, model_name in enumerate(self.models):
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
+            try:
+                response = retrying_session(total=2, retry_post=True, backoff_factor=5).post(
+                    url, headers={"x-goog-api-key": self.api_key}, json=body, timeout=self.timeout
+                )
+                response.raise_for_status()
+                break
+            except requests.RequestException as exc:
+                last_error = exc
+                status = exc.response.status_code if exc.response is not None else None
+                retry_exhausted = isinstance(exc, requests.exceptions.RetryError)
+                if index == len(self.models) - 1 or (not retry_exhausted and status not in {429, 500, 503, 504}):
+                    raise
+        if response is None or not response.ok:
+            assert last_error is not None
+            raise last_error
         payload = response.json()
         try:
             text = payload["candidates"][0]["content"]["parts"][0]["text"]
