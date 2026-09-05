@@ -118,6 +118,18 @@ def _normalize_post(post: GeneratedPost, materials: list[SourceMaterial], topic:
         if grounded_pairs:
             claim.source_urls = [url for url, _ in grounded_pairs]
             claim.evidence_quotes = [quote for _, quote in grounded_pairs]
+        else:
+            claim_words = set(re.findall(r"[a-z0-9]+", claim.text.lower()))
+            best_match: tuple[int, str, str] | None = None
+            for item in materials:
+                for sentence in re.split(r"(?<=[.!?])\s+|\n+", item.text):
+                    sentence = re.sub(r"\s+", " ", sentence).strip()
+                    overlap = len(claim_words & set(re.findall(r"[a-z0-9]+", sentence.lower())))
+                    if overlap >= 3 and (best_match is None or overlap > best_match[0]):
+                        best_match = (overlap, item.url, sentence)
+            if best_match:
+                claim.source_urls = [best_match[1]]
+                claim.evidence_quotes = [best_match[2]]
 
     source_footer = "Sources: " + "; ".join(
         f"{item.source_name} ({item.published_at[:10]})" for item in materials
