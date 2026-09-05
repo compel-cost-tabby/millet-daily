@@ -127,7 +127,11 @@ class GeminiGenerator:
                 "responseSchema": SCHEMA,
             },
         }
-        response = retrying_session(retry_post=True).post(url, params={"key": self.api_key}, json=body, timeout=self.timeout)
+        # Free-tier overload can outlast the default rapid retries. Retry only
+        # generation here, with 20/40/80-second backoff, never Instagram publishing.
+        response = retrying_session(total=4, retry_post=True, backoff_factor=10).post(
+            url, headers={"x-goog-api-key": self.api_key}, json=body, timeout=self.timeout
+        )
         response.raise_for_status()
         payload = response.json()
         try:
